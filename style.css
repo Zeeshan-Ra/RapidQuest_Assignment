@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    width: 0px;
+}
+
+.pr_img {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+.pr_pic {
+    width: 120px;
+    height: 96px;
+    margin: 75px;
+    margin-left: 90px;
+    border-radius: 100px;
+}
+
+.container_fluid {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    margin-left: 70px;
+    width: 395px
+}
+
+.profile {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.material-symbols-outlined {
+    margin: 15px;
+    opacity: 0.5;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.name {
+    margin-top: 75px;
+    margin-left: -45px;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    margin-left: 152px;
+    background-color: #0000ff9c;
+    border-radius: 10px;
+    border-color: white;
+    color: white;
+    cursor: pointer;
+}
+
+@property --p{
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.pie {
+  --p:20;
+  --b:22px;
+  --c:darkred;
+  --w:150px;
+  
+  width:var(--w);
+  aspect-ratio:1;
+  position:relative;
+  display:inline-grid;
+  margin:5px;
+  place-content:center;
+  font-size:25px;
+  font-weight:bold;
+  font-family:sans-serif;
+}
+.pie:before,
+.pie:after {
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+.pie:before {
+  inset:0;
+  background:
+    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+}
+.pie:after {
+  inset:calc(50% - var(--b)/2);
+  background:var(--c);
+  transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+.animate {
+  animation:p 1s .5s both;
+}
+.no-round:before {
+  background-size:0 0,auto;
+}
+.no-round:after {
+  content:none;
+}
+@keyframes p {
+  from{--p:0}
+}
+
+.strate {
+  background-color: whitesmoke;
+  background-color: whitesmoke;
+  padding: 30px;
+  padding-top: 1px;
+  margin-top: 10px;
+}
+
+.leftborder {
+  border-left: 2px solid #0000ff9c;
+}
